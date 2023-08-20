@@ -1,0 +1,356 @@
+body{ 
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box; 
+  background-color: black; 
+  overflow-x: hidden;
+}
+::selection{
+  background-color: white;
+  color: #050806;
+}
+::-webkit-scrollbar{
+  width: 0.8rem;
+} 
+::-webkit-scrollbar-track{
+  background-color: var(--black);
+} 
+::-webkit-scrollbar-thumb{
+  border-radius: 1rem; 
+  background-color: #63d471;
+background-image: linear-gradient(315deg, #52ba5e 0%, #050806 74%);
+
+  height: 8rem;
+}
+.main-div{
+  display: grid; 
+  width:90%; 
+  height: 4rem; 
+  margin-left: 5%; 
+  margin-top: 2%;
+  background-color: transparent;
+  color: aliceblue;  
+
+position: absolute;
+z-index: 2000;
+}  
+.main-div li{
+  list-style: none;
+  border-bottom: 3px solid white;
+}
+.logo{
+  grid-column: 1/1;
+} 
+.logo img{
+  height: 60px;
+  width: 60px; 
+  margin-left: 1.7rem;  
+  border-radius: 50%;
+}
+.elements{
+  grid-column: 2/5; 
+} 
+
+.elements  ul { 
+  display: flex; 
+  justify-content: space-around;
+  
+  align-items: center;
+}
+.elements ul li{ 
+ 
+  font-weight: 800; 
+ 
+} 
+.menu-img img{ 
+  height: 3rem;
+
+}
+.menu-img{
+  align-items: center;
+  grid-column: 5/6;
+ display: flex;
+ justify-content: space-around;  
+} 
+.mobile-version{ 
+  background-color: black;
+  height: 20rem; 
+ display: grid;
+  grid-column: 1/6; 
+  justify-content: center; 
+  grid-row: 2/2;
+  font-weight: 800; 
+  align-items: center;
+z-index: 200;
+width: 100%; 
+border-bottom: 1px solid white; 
+}  
+@media screen and (max-width:1030px) {
+  .elements{
+    display:none; 
+    
+  } 
+  .main-div{
+    background-color: black; 
+    margin-top: 2%;
+    position:relative;
+  }
+  header{
+    position: relative;
+  }
+ 
+  }
+ 
+.crousel-container{
+  width: 90%;
+  height: 600px;
+  margin:  3% auto;
+position: relative; 
+overflow: hidden;
+
+} 
+.slide{
+position: absolute;
+width: 100%;
+height: 100%; 
+
+overflow: hidden; 
+animation: fadeIn 2s; 
+} 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.btns{
+  position: absolute;
+  top: 72%; 
+ left: 80%;
+} 
+button{
+  font-size: 3rem;
+  color: aliceblue;
+  font-weight: 900; 
+  background-color: transparent;
+  border: none; 
+  padding: 0;
+}
+ .sliding{
+  height: 100%;
+  width: 490px;
+  position: absolute;
+  top:0;  
+  background-color: black;
+  right: 0; 
+  z-index: 50000;
+  font-family: 'Space Mono', monospace;
+  color: gray; 
+  text-align: center;
+ } 
+ .sliding button{
+  margin-left: 80%;
+ }
+ .sliding img{ 
+  display: block;
+  align-items: center; 
+  height: 15rem;
+  width: 15rem; 
+margin: 30% auto 5%; 
+
+ } 
+ .sliding p{
+  
+  font-size: 1.1rem;
+ }
+.contract{
+  margin: 10% 0;
+}
+.contract h1{
+color: white; 
+font-size: 3rem;
+font-weight: 700;
+/* padding: 2% 0%; */
+text-align: center;
+}
+
+
+.contract img
+{ margin-top: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;  
+  border-radius: 50%;
+  animation-name: rotato;
+}
+
+
+
+.contract img:hover{
+  transform: translateY(-5px); 
+  transform: scale(1.3);
+  box-shadow: 0px 0px 20px 2px rgba(0,255,255,0.7);
+background-image:  linear-gradient(to right, #d7d2cc 0%, #304352 100%); 
+  animation-name:rotating ;
+  animation-duration: 1s; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate; 
+
+ }
+ @keyframes rotating {
+  0%{
+    transform: rotate(180deg); 
+  }
+  50%{
+    transform: rotate(-180deg);
+  } 
+  
+  100%{
+    transform: rotate(360deg); 
+  }
+ }
+.contract p{
+  font-weight: lighter; 
+  opacity: 0.7;
+  font-size: 1rem;
+  padding-top: 2rem; 
+  padding-bottom: 15rem;
+  color: white; 
+  text-align: center;
+}
+.cont{
+  color: white;  
+  display: flex; 
+  flex-wrap: nowrap;
+  font-family: 'Space Mono', monospace; 
+  color: grey;
+} 
+.cont img {
+  width:  100%;
+  height: 75%;
+}
+
+ .row h2{
+  text-align: center; 
+  font-size: 3rem;
+  font-weight: 600; 
+  margin-top: 0;
+  color: white;
+  padding-top: 0;
+ } 
+ 
+ #ring{
+  height: 70%;
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  color: white;
+  justify-content: center; 
+  flex-basis: 0;
+ 
+ }
+ #ring img{
+  height: 60%;
+  width: 100%; 
+  border: 1px solid white; 
+  
+ } 
+ #ring .row{
+   height: 35rem;
+   width: 30rem; 
+   justify-content: center;
+  margin: 0.5rem;
+  margin-top: 4rem;
+ } 
+ #ring .row p{
+  font-family: 'Space Mono', monospace;
+  color: rgb(167, 163, 163);
+ }
+ #ring .row h2{
+font-size: 2.3rem; 
+text-align: center;
+ } 
+ .hoor{
+  height: 90%;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 25%; 
+
+ } 
+ .bottom-main{
+  color:white; 
+  display: flex; 
+  flex-wrap: nowrap;
+  justify-content: center;
+ } 
+ .bottom-main div{
+  text-align: center;
+  
+ } 
+ .bottom-main  div p{
+  font-weight: 400;
+  font-style: 2rem;
+ }
+ .bottom-main img{
+  height: 32vh;
+  width: 16vw;
+  border: 1px solid white; 
+  margin-right: 1.2rem; 
+  
+ } 
+ .bottom-main img:hover{
+  animation-name: scaling;
+  animation-duration: 1s; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate; 
+
+ }
+ @keyframes scaling {
+  0%{
+    transform: scale(1); 
+  }
+  50%{
+    transform: scale(1.2);
+  } 
+  
+  100%{
+    transform: scale(1); 
+  }
+ }
+ .footr h1{
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 7rem;
+ }
+ .slidehide{
+  visibility: hidden; 
+  position: absolute;
+ } 
+@media screen and (max-width:770px) { 
+  #ring{
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+  } 
+  .cont{
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom-main {
+  display:grid; 
+  grid-column: 1fr;
+  grid-row: 5; 
+    justify-content: center;
+    align-items: center;
+  } 
+  .bottom-main div img{
+    width: 20rem;
+    height:20rem;
+    margin-top: 3rem;
+  }
+}
